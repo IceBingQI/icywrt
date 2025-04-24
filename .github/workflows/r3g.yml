@@ -8,7 +8,7 @@ env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: openwrt-24.10
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: .config-r3g  # 或者 .config-hiwifi，根据需要选择
+  CONFIG_FILE: config-r3g  # 或者 .config-hiwifi，根据需要选择
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
