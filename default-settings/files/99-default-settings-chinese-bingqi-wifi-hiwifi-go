@@ -1,0 +1,14 @@
+#!/bin/sh
+
+sed -i 's/root::0:0:99999:7:::/root:$1$8tV0fjXz$9DoSv4DadkQ4g4zia7tgt.:0:0:99999:7:::/g' /etc/shadow
+sed -i 's/root:::0:99999:7:::/root:$1$8tV0fjXz$9DoSv4DadkQ4g4zia7tgt.:0:0:99999:7:::/g' /etc/shadow
+
+uci set network.lan.ipaddr=192.168.7.1
+
+uci set wireless.radio0.channel='auto'
+uci set wireless.radio0.cell_density='0'
+uci set wireless.default_radio0.ssid='HIWIFI-GO'
+uci set wireless.default_radio0.encryption='psk-mixed'
+uci set wireless.default_radio0.key='88888888'
+
+exit 0

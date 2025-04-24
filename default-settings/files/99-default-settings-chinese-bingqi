@@ -1,0 +1,22 @@
+#!/bin/sh
+
+sed -i 's/root::0:0:99999:7:::/root:$1$8tV0fjXz$9DoSv4DadkQ4g4zia7tgt.:0:0:99999:7:::/g' /etc/shadow
+sed -i 's/root:::0:99999:7:::/root:$1$8tV0fjXz$9DoSv4DadkQ4g4zia7tgt.:0:0:99999:7:::/g' /etc/shadow
+
+#uci set system.cfg01e48a.hostname='icywrt'
+uci set network.lan.ipaddr=192.168.7.1
+uci set network.usbwan=interface
+uci set network.usbwan.device='usb0'
+uci set network.usbwan.proto='dhcp'
+uci set network.usbwan6=interface
+uci set network.usbwan6.device='usb0'
+uci set network.usbwan6.proto='dhcpv6'
+uci set network.usbethwan=interface
+uci set network.usbethwan.device='eth1'
+uci set network.usbethwan.proto='dhcp'
+uci set network.usbethwan6=interface
+uci set network.usbethwan6.device='eth1'
+uci set network.usbethwan6.proto='dhcpv6'
+uci set firewall.@zone[1].network='wan wan6 usbwan usbwan6 usbethwan usbethwan6'
+
+exit 0
