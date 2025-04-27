@@ -59,6 +59,7 @@ jobs:
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
+        [ -e $DEFAULT_SETTINGS ] && rm -rf openwrt/package/emortal/default-settings
         [ -e $DEFAULT_SETTINGS ] && mv $DEFAULT_SETTINGS openwrt/package/emortal/
         cd openwrt/package
         git clone https://gitee.com/suiyeyiu/luci-app-adguardhome.git luci-app-adguardhome
