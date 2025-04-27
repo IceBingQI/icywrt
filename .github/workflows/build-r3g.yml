@@ -22,6 +22,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config-r3g
   DEFAULT_SETTINGS: default-settings
+  SUNXI_TOOLS: sunxi-tools
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
@@ -61,6 +62,7 @@ jobs:
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         [ -e $DEFAULT_SETTINGS ] && rm -rf openwrt/package/emortal/default-settings
         [ -e $DEFAULT_SETTINGS ] && mv $DEFAULT_SETTINGS openwrt/package/emortal/
+        [ -e $SUNXI_TOOLS ] && mv $SUNXI_TOOLS openwrt/package/
         cd openwrt/package
         git clone https://gitee.com/suiyeyiu/luci-app-adguardhome.git luci-app-adguardhome
         git clone https://github.com/sirpdboy/luci-app-lucky.git luci-app-lucky

@@ -69,7 +69,7 @@ define Package/default-settings-chn-bingqi
           +luci-app-sqm +luci-app-ttyd +luci-app-upnp \
           +luci-app-usb-printer +luci-app-vsftpd +luci-app-wol \
           +luci-app-argon-config +luci-theme-argon \
-          +automount +autosamba +adb +unzip +shadow-useradd +shadow-userdel
+          +automount +autosamba +adb +unzip
 endef
 
 define Package/default-settings-chn-bingqi-normal
@@ -109,7 +109,7 @@ define Package/default-settings-chn-bingqi-normal
           +kmod-fs-ntfs3 +kmod-fs-vfat +kmod-fuse \
           +cfdisk +lsblk +fdisk +coremark \
           +pciids +pciutils +usb-modeswitch +usbids +usbutils \
-          +automount +autosamba +adb +unzip +shadow-useradd +shadow-userdel
+          +automount +autosamba +adb +unzip
 endef
 
 define Package/default-settings-chn-bingqi-wifi
